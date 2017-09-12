@@ -131,14 +131,14 @@ tags: http_parser.c http_parser.h test.c
 install: library
 	$(INSTALL) -D  http_parser.h $(INCLUDEDIR)/http_parser.h
 	$(INSTALL) -D $(LIBNAME) $(LIBDIR)/$(LIBNAME)
-	ln -s $(LIBDIR)/$(LIBNAME) $(LIBDIR)/$(SONAME)
-	ln -s $(LIBDIR)/$(LIBNAME) $(LIBDIR)/$(SOLIBNAME).$(SOEXT)
+	ln -fs $(LIBDIR)/$(LIBNAME) $(LIBDIR)/$(SONAME)
+	ln -fs $(LIBDIR)/$(LIBNAME) $(LIBDIR)/$(SOLIBNAME).$(SOEXT)
 
 install-strip: library
 	$(INSTALL) -D  http_parser.h $(INCLUDEDIR)/http_parser.h
 	$(INSTALL) -D -s $(LIBNAME) $(LIBDIR)/$(LIBNAME)
-	ln -s $(LIBDIR)/$(LIBNAME) $(LIBDIR)/$(SONAME)
-	ln -s $(LIBDIR)/$(LIBNAME) $(LIBDIR)/$(SOLIBNAME).$(SOEXT)
+	ln -fs $(LIBDIR)/$(LIBNAME) $(LIBDIR)/$(SONAME)
+	ln -fs $(LIBDIR)/$(LIBNAME) $(LIBDIR)/$(SOLIBNAME).$(SOEXT)
 
 uninstall:
 	rm $(INCLUDEDIR)/http_parser.h
